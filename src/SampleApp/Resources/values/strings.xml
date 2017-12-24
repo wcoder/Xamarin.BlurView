@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BlurView</string>
+    <string name="blur_me">Blur me please!</string>
+    <string name="description_text">Some Long Description Text\nSome Long Description Text</string>
+    <string name="slogan">Strong slogan here</string>
+    <string name="radius">Radius</string>
+</resources>
