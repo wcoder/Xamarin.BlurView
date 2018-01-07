@@ -1,0 +1,17 @@
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+  <metadata>
+    <id>Xamarin.BlurView</id>
+    <version>1.3.4</version>
+    <title>Dynamic blur for Xamarin Android</title>
+    <authors>Dmitry Saviuk, Yauheni Pakala</authors>
+    <owners>Yauheni Pakala</owners>
+    <licenseUrl>https://github.com/wcoder/Xamarin.BlurView/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/wcoder/Xamarin.BlurView</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Dynamic iOS-like blur of underlying Views for Android.</description>
+    <tags>xamarin android monodroid xamarin.android blur view dynamic</tags>
+  </metadata>
+  <files>
+    <file src="..\src\Xamarin.BlurView\bin\Release\Xamarin.BlurView.dll" target="lib\MonoAndroid10\Xamarin.BlurView.dll" />
+  </files>
+</package>

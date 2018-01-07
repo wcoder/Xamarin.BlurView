@@ -1,4 +1,4 @@
-# Xamarin.BlurView ![version](http://img.shields.io/badge/original-v1.3.4-brightgreen.svg?style=flat)
+# Xamarin.BlurView ![version](http://img.shields.io/badge/original-v1.3.4-brightgreen.svg?style=flat) [![NuGet Badge](https://buildstats.info/nuget/Xamarin.BlurView)](https://www.nuget.org/packages/Xamarin.BlurView/)
 
 Port of [Dimezis/BlurView](https://github.com/Dimezis/BlurView) for Xamarin.Android
 
@@ -55,7 +55,7 @@ Always try to choose the closest possible root layout to BlurView. This will gre
 ## Nuget
 
 ```
-// TODO
+> Install-Package Xamarin.BlurView
 ```
 
 ## Important
