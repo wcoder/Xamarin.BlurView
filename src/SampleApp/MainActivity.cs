@@ -9,10 +9,9 @@ using Android.Support.V4.View;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
-using Eightbitlab.Com.Blurview;
 using Java.Lang;
-//using Com.Eightbitlab.Supportrenderscriptblur;
-using BlurView = Eightbitlab.Com.Blurview.BlurView;
+using Com.EightbitLab.BlurViewBinding;
+//using Com.EightbitLab.SupportRenderScriptBlurBinding;
 
 // Ported from:
 // https://github.com/Dimezis/BlurView/blob/master/app/src/main/java/com/eightbitlab/blurview_sample/MainActivity.java
@@ -60,7 +59,7 @@ namespace SampleApp
             
             var topViewSettings = topBlurView.SetupWith(root)
                 .WindowBackground(windowBackground)
-                .BlurAlgorithm(new RenderScriptBlur(this))
+                .BlurAlgorithm(new RenderScriptBlur(this)) // SupportRenderScriptBlur
                 .BlurRadius(radius);
             
 
