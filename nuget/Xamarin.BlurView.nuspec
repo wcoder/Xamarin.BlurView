@@ -12,6 +12,6 @@
     <tags>xamarin android monodroid xamarin.android blur view dynamic</tags>
   </metadata>
   <files>
-    <file src="..\src\Xamarin.BlurView\bin\Release\Xamarin.BlurView.dll" target="lib\MonoAndroid10\Xamarin.BlurView.dll" />
+    <file src="src\Xamarin.BlurView\bin\Release\Xamarin.BlurView.dll" target="lib\MonoAndroid10\Xamarin.BlurView.dll" />
   </files>
 </package>
