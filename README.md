@@ -1,4 +1,4 @@
-# Xamarin.BlurView ![version](http://img.shields.io/badge/original-v1.3.4-brightgreen.svg?style=flat) [![NuGet Badge](https://buildstats.info/nuget/Xamarin.BlurView)](https://www.nuget.org/packages/Xamarin.BlurView/)
+# Xamarin.BlurView ![version](http://img.shields.io/badge/original-v1.3.4-brightgreen.svg?style=flat) [![NuGet Badge](https://buildstats.info/nuget/Xamarin.BlurView)](https://www.nuget.org/packages/Xamarin.BlurView/) [![Build status](https://ci.appveyor.com/api/projects/status/74vj31f749e3uyyq?svg=true)](https://ci.appveyor.com/project/wcoder/xamarin-blurview)
 
 Port of [Dimezis/BlurView](https://github.com/Dimezis/BlurView) for Xamarin.Android
 
