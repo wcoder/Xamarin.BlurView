@@ -4,5 +4,26 @@
              xmlns:local="clr-namespace:BlurViewFormsSample"
              x:Class="BlurViewFormsSample.MainPage">
 
+    <ScrollView>
+        <StackLayout BackgroundColor="Red">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+
+            <local:FormsBlurView HeightRequest="100">
+                <Label Text="Test Text" />
+                <Button Text="Click me!" />
+            </local:FormsBlurView>
+
+            <BoxView BackgroundColor="Blue" HeightRequest="100" />
+            <BoxView BackgroundColor="Blue" HeightRequest="100" />
+            <BoxView BackgroundColor="Blue" HeightRequest="100" />
+            <BoxView BackgroundColor="Blue" HeightRequest="100" />
+            <BoxView BackgroundColor="Blue" HeightRequest="100" />
+            <BoxView BackgroundColor="Blue" HeightRequest="100" />
+            <BoxView BackgroundColor="Blue" HeightRequest="100" />
+            <BoxView BackgroundColor="Blue" HeightRequest="100" />
+            <BoxView BackgroundColor="Blue" HeightRequest="100" />
+            <BoxView BackgroundColor="Blue" HeightRequest="100" />
+        </StackLayout>
+    </ScrollView>
 
 </ContentPage>
