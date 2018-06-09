@@ -60,13 +60,15 @@ namespace SampleApp
             var topViewSettings = topBlurView.SetupWith(root)
                 .WindowBackground(windowBackground)
                 .BlurAlgorithm(new RenderScriptBlur(this)) // SupportRenderScriptBlur
-                .BlurRadius(radius);
-            
+                .BlurRadius(radius)
+                .SetHasFixedTransformationMatrix(true);
+
 
             var bottomViewSettings = bottomBlurView.SetupWith(root)
                 .WindowBackground(windowBackground)
                 .BlurAlgorithm(new RenderScriptBlur(this)) // SupportRenderScriptBlur
-                .BlurRadius(radius);
+                .BlurRadius(radius)
+                .SetHasFixedTransformationMatrix(true);
 
             int initialProgress = (int)(radius * step);
             radiusSeekBar.SetProgress(initialProgress, true);
