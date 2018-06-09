@@ -58,6 +58,10 @@ Always try to choose the closest possible root layout to BlurView. This will gre
 > Install-Package Xamarin.BlurView
 ```
 
+## Xamarin.Forms
+
+You may use this library for Xamarin.Forms application, for this you need to create custom control with custom renderer. Example of implementation you can see here: https://github.com/wcoder/Xamarin.BlurView/commit/50c71e4bcc58cc07deb108c18dd6a40ccd077832
+
 ## Important
 BlurView can be used only in a hardware-accelerated window.
 Otherwise, blur will not be drawn. It will fallback to a regular FrameLayout drawing process.
