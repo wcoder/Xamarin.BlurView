@@ -1,4 +1,4 @@
-# Xamarin.BlurView ![version](http://img.shields.io/badge/original-v1.3.4-brightgreen.svg?style=flat) [![NuGet Badge](https://buildstats.info/nuget/Xamarin.BlurView)](https://www.nuget.org/packages/Xamarin.BlurView/) [![Build status](https://ci.appveyor.com/api/projects/status/74vj31f749e3uyyq?svg=true)](https://ci.appveyor.com/project/wcoder/xamarin-blurview)
+# Xamarin.BlurView ![version](http://img.shields.io/badge/original-v1.4.0-red.svg?style=flat) [![NuGet Badge](https://buildstats.info/nuget/Xamarin.BlurView)](https://www.nuget.org/packages/Xamarin.BlurView/) [![Build status](https://ci.appveyor.com/api/projects/status/74vj31f749e3uyyq?svg=true)](https://ci.appveyor.com/project/wcoder/xamarin-blurview)
 
 Port of [Dimezis/BlurView](https://github.com/Dimezis/BlurView) for Xamarin.Android
 
@@ -67,12 +67,12 @@ BlurView can be used only in a hardware-accelerated window.
 Otherwise, blur will not be drawn. It will fallback to a regular FrameLayout drawing process.
 
 ## Performance
-It takes 1-4ms on Nexus 5 and Nexus 4 to draw BlurView with the setup given in example project
+It takes 1-4ms on Nexus 5 and Nexus 4 to draw BlurView with the setup given in example project.
 
 License
 -------
 
-    Copyright 2016 Dmitry Saviuk, 2017 Yauheni Pakala
+    Copyright 2016 Dmitry Saviuk (Android library), 2017 Yauheni Pakala (Xamarin library)
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
