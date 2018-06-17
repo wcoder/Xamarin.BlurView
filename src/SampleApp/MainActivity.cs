@@ -71,7 +71,7 @@ namespace SampleApp
                 .SetHasFixedTransformationMatrix(true);
 
             int initialProgress = (int)(radius * step);
-            radiusSeekBar.SetProgress(initialProgress, true);
+            radiusSeekBar.Progress = initialProgress;
 
             radiusSeekBar.ProgressChanged += (sender, args) =>
             {
