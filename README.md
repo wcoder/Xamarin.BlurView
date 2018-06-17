@@ -40,10 +40,13 @@ Drawable windowBackground = decorView.Background;
 blurView.SetupWith(rootView)
        .WindowBackground(windowBackground)
        .BlurAlgorithm(new RenderScriptBlur(this))
-       .BlurRadius(radius);
+       .BlurRadius(radius)
+       .SetHasFixedTransformationMatrix(true);
 ```
 
 Always try to choose the closest possible root layout to BlurView. This will greatly reduce the amount of work needed for creating View hierarchy snapshot.
+
+You can use `SetHasFixedTransformationMatrix` in case if you are not animating your BlurView, this might slightly improve the performance as BlurView won't have to recalculate its transformation matrix on each frame.
 
 ## Supporting API < 17
 
