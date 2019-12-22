@@ -1,7 +1,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
   <metadata>
     <id>Xamarin.BlurView</id>
-    <version>1.4.0</version>
+    <version>1.6.3</version>
     <title>Dynamic blur for Xamarin Android</title>
     <authors>Dmitry Saviuk, Yauheni Pakala</authors>
     <owners>Yauheni Pakala</owners>
