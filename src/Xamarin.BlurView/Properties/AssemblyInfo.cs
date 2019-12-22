@@ -11,7 +11,7 @@ using Android.App;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Xamarin.BlurView")]
-[assembly: AssemblyCopyright("Copyright © Yauheni Pakala 2017")]
+[assembly: AssemblyCopyright("Copyright © Yauheni Pakala 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]

@@ -47,7 +47,7 @@ namespace SampleApp
             SetupBlurView();
             SetupViewPager();
         }
-        
+
         void SetupBlurView()
         {
             float radius = 25f;
@@ -56,18 +56,18 @@ namespace SampleApp
 
             //set background, if your root layout doesn't have one
             Drawable windowBackground = Window.DecorView.Background;
-            
+
             var topViewSettings = topBlurView.SetupWith(root)
-                .WindowBackground(windowBackground)
-                .BlurAlgorithm(new RenderScriptBlur(this)) // SupportRenderScriptBlur
-                .BlurRadius(radius)
+                .SetFrameClearDrawable(windowBackground)
+                .SetBlurAlgorithm(new RenderScriptBlur(this)) // SupportRenderScriptBlur
+                .SetBlurRadius(radius)
                 .SetHasFixedTransformationMatrix(true);
 
 
             var bottomViewSettings = bottomBlurView.SetupWith(root)
-                .WindowBackground(windowBackground)
-                .BlurAlgorithm(new RenderScriptBlur(this)) // SupportRenderScriptBlur
-                .BlurRadius(radius)
+                .SetFrameClearDrawable(windowBackground)
+                .SetBlurAlgorithm(new RenderScriptBlur(this)) // SupportRenderScriptBlur
+                .SetBlurRadius(radius)
                 .SetHasFixedTransformationMatrix(true);
 
             int initialProgress = (int)(radius * step);
@@ -77,8 +77,8 @@ namespace SampleApp
             {
                 float blurRadius = args.Progress / step;
                 blurRadius = Math.Max(blurRadius, minBlurRadius);
-                topViewSettings.BlurRadius(blurRadius);
-                bottomViewSettings.BlurRadius(blurRadius);
+                topViewSettings.SetBlurRadius(blurRadius);
+                bottomViewSettings.SetBlurRadius(blurRadius);
             };
         }
 
@@ -95,7 +95,7 @@ namespace SampleApp
         List<BaseFragment> pages;
 
         public ViewPagerAdapter(Android.Support.V4.App.FragmentManager fragmentManager)
-            : base (fragmentManager)
+            : base(fragmentManager)
         {
             pages = new List<BaseFragment>
             {
