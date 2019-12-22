@@ -96,7 +96,7 @@
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Xamarin.BlurView\Xamarin.BlurView.csproj">
+    <ProjectReference Include="..\src\Xamarin.BlurView\Xamarin.BlurView.csproj">
       <Project>{f5dda6ed-ab87-4c6f-89a6-96aeeadeb8bb}</Project>
       <Name>Xamarin.BlurView</Name>
     </ProjectReference>

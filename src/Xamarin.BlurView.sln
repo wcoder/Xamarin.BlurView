@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.BlurView", "Xamarin.BlurView\Xamarin.BlurView.csproj", "{F5DDA6ED-AB87-4C6F-89A6-96AEEADEB8BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp", "SampleApp\SampleApp.csproj", "{4D4FA695-ADDC-44E2-996A-1AD42326E6F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp", "..\samples\SampleApp\SampleApp.csproj", "{4D4FA695-ADDC-44E2-996A-1AD42326E6F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.BlurView.SupportRenderScriptBlur", "Xamarin.BlurView.SupportRenderScriptBlur\Xamarin.BlurView.SupportRenderScriptBlur.csproj", "{874CA305-2F23-4046-AA19-46955CCA7033}"
 EndProject

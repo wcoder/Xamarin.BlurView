@@ -1,4 +1,8 @@
-# Xamarin.BlurView ![version](http://img.shields.io/badge/original-v1.4.0-red.svg?style=flat) [![NuGet Badge](https://buildstats.info/nuget/Xamarin.BlurView)](https://www.nuget.org/packages/Xamarin.BlurView/) ![Build status](https://yauhenipakala.visualstudio.com/_apis/public/build/definitions/b0170656-dd62-445e-bbb7-d6a336f4a889/1/badge)
+# Xamarin.BlurView
+
+![version](https://img.shields.io/badge/original-v1.6.3-orange.svg?style=flat)
+[![NuGet Badge](https://buildstats.info/nuget/Xamarin.BlurView)](https://www.nuget.org/packages/Xamarin.BlurView/)
+![Build status](https://yauhenipakala.visualstudio.com/_apis/public/build/definitions/b0170656-dd62-445e-bbb7-d6a336f4a889/1/badge)
 
 Port of [Dimezis/BlurView](https://github.com/Dimezis/BlurView) for Xamarin.Android
 
@@ -38,9 +42,9 @@ ViewGroup rootView = decorView.FindViewById<ViewGroup>(Android.Resource.Id.conte
 Drawable windowBackground = decorView.Background;
 
 blurView.SetupWith(rootView)
-       .WindowBackground(windowBackground)
-       .BlurAlgorithm(new RenderScriptBlur(this))
-       .BlurRadius(radius)
+       .SetFrameClearDrawable(windowBackground)
+       .SetBlurAlgorithm(new RenderScriptBlur(this))
+       .SetBlurRadius(radius)
        .SetHasFixedTransformationMatrix(true);
 ```
 
