@@ -18,7 +18,7 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <DevInstrumentationEnabled>True</DevInstrumentationEnabled>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -52,10 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0" />
-    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="28.0.0" />
-    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView" Version="28.0.0" />
-    <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0" />
+    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.2.1" />
   </ItemGroup>  
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -99,6 +96,10 @@
     <ProjectReference Include="..\..\src\Xamarin.BlurView\Xamarin.BlurView.csproj">
       <Project>{f5dda6ed-ab87-4c6f-89a6-96aeeadeb8bb}</Project>
       <Name>Xamarin.BlurView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Xamarin.BlurView.SupportRenderScriptBlur\Xamarin.BlurView.SupportRenderScriptBlur.csproj">
+      <Project>{874CA305-2F23-4046-AA19-46955CCA7033}</Project>
+      <Name>Xamarin.BlurView.SupportRenderScriptBlur</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
