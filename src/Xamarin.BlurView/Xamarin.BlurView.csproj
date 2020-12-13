@@ -16,6 +16,7 @@
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <AndroidClassParser>class-parse</AndroidClassParser>
     <PackageId>Xamarin.BlurView</PackageId>
     <PackageVersion>1.6.3</PackageVersion>
     <Authors>Dmitry Saviuk, Yauheni Pakala</Authors>
@@ -61,11 +62,14 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="Jars\blurview-1.6.3.aar" />
+    <LibraryProjectZip Include="Jars\blurview-1.6.5.aar" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2">
       <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Annotation">
+      <Version>1.1.0.7</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />

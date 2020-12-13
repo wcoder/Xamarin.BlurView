@@ -13,6 +13,7 @@
     <AssemblyName>Xamarin.BlurView.SupportRenderScriptBlur</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <AndroidClassParser>class-parse</AndroidClassParser>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,10 +41,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0" />
-    <!-- <PackageReference Include="Xamarin.Android.Support.v8.RenderScript" Version="28.0.0" /> -->
-  </ItemGroup>
-  <ItemGroup>
     <TransformFile Include="Transforms\Metadata.xml" />
     <TransformFile Include="Transforms\EnumFields.xml" />
     <TransformFile Include="Transforms\EnumMethods.xml" />
@@ -53,6 +50,9 @@
       <Project>{f5dda6ed-ab87-4c6f-89a6-96aeeadeb8bb}</Project>
       <Name>Xamarin.BlurView</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.5" />
   </ItemGroup>
   <ItemGroup>
     <LibraryProjectZip Include="Jars\supportrenderscriptblur-1.0.2.aar" />
