@@ -3,18 +3,18 @@ using Android.App;
 using Android.Content.PM;
 using Android.Graphics.Drawables;
 using Android.OS;
-using Android.Support.Design.Widget;
-using Android.Support.V4.App;
-using Android.Support.V4.View;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Java.Lang;
 using Com.EightbitLab.BlurViewBinding;
+using AndroidX.ViewPager.Widget;
+using AndroidX.AppCompat.App;
+using Google.Android.Material.Tabs;
+using AndroidX.Fragment.App;
 //using Com.EightbitLab.SupportRenderScriptBlurBinding;
 
 // Ported from:
-// https://github.com/Dimezis/BlurView/blob/master/app/src/main/java/com/eightbitlab/blurview_sample/MainActivity.java
+// https://github.com/Dimezis/BlurView/blob/b5f6f414ae16885acb709fe5a65d24df05c4c62a/app/src/main/java/com/eightbitlab/blurview_sample/MainActivity.java
 namespace SampleApp
 {
     [Activity(
@@ -63,7 +63,6 @@ namespace SampleApp
                 .SetBlurRadius(radius)
                 .SetHasFixedTransformationMatrix(true);
 
-
             var bottomViewSettings = bottomBlurView.SetupWith(root)
                 .SetFrameClearDrawable(windowBackground)
                 .SetBlurAlgorithm(new RenderScriptBlur(this)) // SupportRenderScriptBlur
@@ -94,8 +93,8 @@ namespace SampleApp
     {
         List<BaseFragment> pages;
 
-        public ViewPagerAdapter(Android.Support.V4.App.FragmentManager fragmentManager)
-            : base(fragmentManager)
+        public ViewPagerAdapter(AndroidX.Fragment.App.FragmentManager fragmentManager)
+            : base(fragmentManager, BehaviorResumeOnlyCurrentFragment)
         {
             pages = new List<BaseFragment>
             {
@@ -107,7 +106,7 @@ namespace SampleApp
 
         public override int Count => pages.Count;
 
-        public override Android.Support.V4.App.Fragment GetItem(int position)
+        public override AndroidX.Fragment.App.Fragment GetItem(int position)
         {
             return pages[position];
         }

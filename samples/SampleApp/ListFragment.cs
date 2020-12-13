@@ -1,6 +1,6 @@
 ﻿using Android.Content;
-using Android.Support.V7.Widget;
 using Android.Views;
+using AndroidX.RecyclerView.Widget;
 
 namespace SampleApp
 {
@@ -58,7 +58,7 @@ namespace SampleApp
 
         class Holder : RecyclerView.ViewHolder
         {
-            public Holder(View itemView) : base(itemView) {}
+            public Holder(View itemView) : base(itemView) { }
         }
     }
 }
