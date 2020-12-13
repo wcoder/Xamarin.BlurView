@@ -20,7 +20,8 @@ It honors its position and size changes, including view animation and property a
 ## [Demo App at Google Play](https://play.google.com/store/apps/details?id=com.eightbitlab.blurview_sample)
 
 ## How to use
-```XML
+
+```xml
 <eightbitlab.com.blurview.BlurView
   android:id="@+id/blurView"
   android:layout_width="match_parent"
@@ -58,6 +59,11 @@ You can use `SetHasFixedTransformationMatrix` in case if you are not animating y
 // TODO
 ```
 
+## Support Xamarin.Forms
+
+This library does not provide support for Xamarin.Forms out of the box, but you can do it via custom controls or effects.
+
+Also, **highly recommended** to use [Sharpnado.MaterialFrame](https://github.com/roubachof/Sharpnado.MaterialFrame) to make views blurring.
 
 ## Nuget
 
