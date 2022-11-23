@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.BlurView", "Xamarin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp", "..\samples\SampleApp\SampleApp.csproj", "{4D4FA695-ADDC-44E2-996A-1AD42326E6F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.BlurView.SupportRenderScriptBlur", "Xamarin.BlurView.SupportRenderScriptBlur\Xamarin.BlurView.SupportRenderScriptBlur.csproj", "{874CA305-2F23-4046-AA19-46955CCA7033}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{0BDE68D3-F06C-40A3-A09C-407CCA4924A3}"
 EndProject
 Global
@@ -27,10 +25,6 @@ Global
 		{4D4FA695-ADDC-44E2-996A-1AD42326E6F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D4FA695-ADDC-44E2-996A-1AD42326E6F2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4D4FA695-ADDC-44E2-996A-1AD42326E6F2}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{874CA305-2F23-4046-AA19-46955CCA7033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{874CA305-2F23-4046-AA19-46955CCA7033}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{874CA305-2F23-4046-AA19-46955CCA7033}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{874CA305-2F23-4046-AA19-46955CCA7033}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -18,7 +18,7 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <DevInstrumentationEnabled>True</DevInstrumentationEnabled>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -96,10 +96,6 @@
     <ProjectReference Include="..\..\src\Xamarin.BlurView\Xamarin.BlurView.csproj">
       <Project>{f5dda6ed-ab87-4c6f-89a6-96aeeadeb8bb}</Project>
       <Name>Xamarin.BlurView</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Xamarin.BlurView.SupportRenderScriptBlur\Xamarin.BlurView.SupportRenderScriptBlur.csproj">
-      <Project>{874CA305-2F23-4046-AA19-46955CCA7033}</Project>
-      <Name>Xamarin.BlurView.SupportRenderScriptBlur</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

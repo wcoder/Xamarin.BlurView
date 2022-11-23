@@ -13,12 +13,12 @@
     <RootNamespace>Xamarin.BlurView</RootNamespace>
     <AssemblyName>Xamarin.BlurView</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <AndroidClassParser>class-parse</AndroidClassParser>
     <PackageId>Xamarin.BlurView</PackageId>
-    <PackageVersion>1.6.5</PackageVersion>
+    <PackageVersion>2.0.2</PackageVersion>
     <Authors>Dmitry Saviuk, Yauheni Pakala</Authors>
     <PackageLicenseUrl>https://github.com/wcoder/Xamarin.BlurView/blob/master/LICENSE.md</PackageLicenseUrl>
     <Owners>Yauheni Pakala</Owners>
@@ -62,7 +62,7 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="Jars\blurview-1.6.5.aar" />
+    <LibraryProjectZip Include="Jars\blurview-2.0.2.aar" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2">

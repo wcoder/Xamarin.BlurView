@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Android.App;
 using Android.Content.PM;
-using Android.Graphics.Drawables;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
@@ -11,6 +10,9 @@ using AndroidX.ViewPager.Widget;
 using AndroidX.AppCompat.App;
 using Google.Android.Material.Tabs;
 using AndroidX.Fragment.App;
+using Math = Java.Lang.Math;
+using String = Java.Lang.String;
+
 //using Com.EightbitLab.SupportRenderScriptBlurBinding;
 
 // Ported from:
@@ -25,73 +27,88 @@ namespace SampleApp
         Theme = "@style/Theme.MyTheme")]
     public class MainActivity : AppCompatActivity
     {
-        ViewGroup root;
-        ViewPager viewPager;
-        SeekBar radiusSeekBar;
-        BlurView topBlurView;
-        BlurView bottomBlurView;
-        TabLayout tabLayout;
+        private ViewPager viewPager;
+        private TabLayout tabLayout;
+        private BlurView bottomBlurView;
+        private BlurView topBlurView;
+        private SeekBar radiusSeekBar;
+        private ViewGroup root;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
-
-            root = FindViewById<ViewGroup>(Resource.Id.root);
-            viewPager = FindViewById<ViewPager>(Resource.Id.viewPager);
-            radiusSeekBar = FindViewById<SeekBar>(Resource.Id.radiusSeekBar);
-            topBlurView = FindViewById<BlurView>(Resource.Id.topBlurView);
-            bottomBlurView = FindViewById<BlurView>(Resource.Id.bottomBlurView);
-            tabLayout = FindViewById<TabLayout>(Resource.Id.tabLayout);
-
+            InitView();
             SetupBlurView();
             SetupViewPager();
         }
 
+        private void InitView()
+        {
+            viewPager = FindViewById<ViewPager>(Resource.Id.viewPager);
+            tabLayout = FindViewById<TabLayout>(Resource.Id.tabLayout);
+            bottomBlurView = FindViewById<BlurView>(Resource.Id.bottomBlurView);
+            topBlurView = FindViewById<BlurView>(Resource.Id.topBlurView);
+            radiusSeekBar = FindViewById<SeekBar>(Resource.Id.radiusSeekBar);
+            root = FindViewById<ViewGroup>(Resource.Id.root);
+        }
+
+        private void SetupViewPager()
+        {
+            viewPager.OffscreenPageLimit = 2;
+            viewPager.Adapter = new ViewPagerAdapter(SupportFragmentManager);
+            tabLayout.SetupWithViewPager(viewPager);
+        }
+
         void SetupBlurView()
         {
-            float radius = 25f;
-            float minBlurRadius = 10f;
-            float step = 4f;
+            const float radius = 25f;
+            const float minBlurRadius = 4f;
+            const float step = 4f;
 
             //set background, if your root layout doesn't have one
-            Drawable windowBackground = Window.DecorView.Background;
+            var windowBackground = Window?.DecorView.Background;
+            var algorithm = GetBlurAlgorithm();
 
-            var topViewSettings = topBlurView.SetupWith(root)
+            var topViewSettings = topBlurView.SetupWith(root, algorithm)
                 .SetFrameClearDrawable(windowBackground)
-                .SetBlurAlgorithm(new RenderScriptBlur(this)) // SupportRenderScriptBlur
-                .SetBlurRadius(radius)
-                .SetHasFixedTransformationMatrix(true);
+                .SetBlurRadius(radius);
 
-            var bottomViewSettings = bottomBlurView.SetupWith(root)
+            var bottomViewSettings = bottomBlurView.SetupWith(root, algorithm)
                 .SetFrameClearDrawable(windowBackground)
-                .SetBlurAlgorithm(new RenderScriptBlur(this)) // SupportRenderScriptBlur
-                .SetBlurRadius(radius)
-                .SetHasFixedTransformationMatrix(true);
+                .SetBlurRadius(radius);
 
-            int initialProgress = (int)(radius * step);
+            var initialProgress = (int) (radius * step);
             radiusSeekBar.Progress = initialProgress;
 
             radiusSeekBar.ProgressChanged += (sender, args) =>
             {
-                float blurRadius = args.Progress / step;
+                var blurRadius = args.Progress / step;
                 blurRadius = Math.Max(blurRadius, minBlurRadius);
                 topViewSettings.SetBlurRadius(blurRadius);
                 bottomViewSettings.SetBlurRadius(blurRadius);
             };
         }
 
-        void SetupViewPager()
+        private IBlurAlgorithm GetBlurAlgorithm()
         {
-            viewPager.OffscreenPageLimit = 2;
-            viewPager.Adapter = new ViewPagerAdapter(SupportFragmentManager);
-            tabLayout.SetupWithViewPager(viewPager);
+            IBlurAlgorithm algorithm;
+            if (Build.VERSION.SdkInt > BuildVersionCodes.R)
+            {
+                algorithm = new RenderEffectBlur();
+            }
+            else
+            {
+                algorithm = new RenderScriptBlur(this);
+            }
+
+            return algorithm;
         }
     }
 
     class ViewPagerAdapter : FragmentPagerAdapter
     {
-        List<BaseFragment> pages;
+        private readonly List<BaseFragment> pages;
 
         public ViewPagerAdapter(AndroidX.Fragment.App.FragmentManager fragmentManager)
             : base(fragmentManager, BehaviorResumeOnlyCurrentFragment)
@@ -113,8 +130,7 @@ namespace SampleApp
 
         public override ICharSequence GetPageTitleFormatted(int position)
         {
-            return new Java.Lang.String(pages[position].Title);
+            return new String(pages[position].Title);
         }
     }
 }
-

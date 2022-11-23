@@ -19,19 +19,11 @@ namespace SampleApp
             Init();
         }
 
-        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Android.OS.Bundle savedInstanceState)
+        private void Init()
         {
-            var view = base.OnCreateView(inflater, container, savedInstanceState);
-
-            recyclerView = view.FindViewById<RecyclerView>(Resource.Id.recyclerView);
-
-            return view;
-        }
-
-        void Init()
-        {
-            recyclerView.SetAdapter(new ExampleListAdapter(Context));
-            recyclerView.SetLayoutManager(new LinearLayoutManager(Context));
+            recyclerView = View.FindViewById<RecyclerView>(Resource.Id.recyclerView);
+            recyclerView?.SetAdapter(new ExampleListAdapter(Context));
+            recyclerView?.SetLayoutManager(new LinearLayoutManager(Context));
         }
     }
 
